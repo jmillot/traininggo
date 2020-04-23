@@ -1,0 +1,12 @@
+En neuf, pour viser la construction d'un bâtiment répondant aux exigences de la RT 2012 Bâtiment Basse Consommation (BBC), il faut opter pour une bonne performance thermique de l’enveloppe du bâtiment et choisir des valeurs minimales de performance :
+
+R = 8m2.K/W pour la Toiture (tant en rampants et qu’en plafond de combles),
+R = 4m2.K/W pour les Murs en façade ou en pignon et Planchers bas.
+En rénovation, il faut a minima choisir des valeurs de performances qui répondent à la fois aux exigences du Crédit d’impôt et des CEE (Certificat d’Economies d’Energie), soit :
+
+R ≥ 3.0 m2 K/W en Planchers bas sur sous-sol, sur vide sanitaire ou sur passage ouvert,
+R ≥ 3.7 m2 K/W en Murs en façade ou en pignon,
+R ≥ 4.5 m2 K/W en Toitures – terrasses,
+R ≥ 6.0 m2 K/W en Rampants de toiture et plafonds de combles,
+R ≥ 7.0 m2 K/W en Planchers de combles perdus.
+Les produits d’isolation employés doivent porter le marquage CE sur les emballages et s’ils mentionnent le logo ACERMI , cela signifie que leur résistance thermique ainsi que toutes les caractéristiques techniques annoncées sont certifiées.
