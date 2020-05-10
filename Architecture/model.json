@@ -1,0 +1,78 @@
+{
+    "apps":[
+        {
+            "id": 123456,
+            "name": "panier",
+            "product_owner": "Toto",
+            "resp_domaine_IT":"Titi",
+            "current_version": "1.0",
+            "last_version":{
+                "date": "2020-06-01",
+                "ver_num": "2.0"
+            },
+            "portefeuille":"Finance",
+            "projet":{
+                "ppm":"P097",
+                "date_fin":"2020-12-31"
+            },
+            "editeur":{
+                "name": "NRX",
+                "contact_tel":"",
+                "contact_mail": "machin@cie.com"
+            },
+            "qualite":{
+                "repository": "code_commit",
+                "url":"https//www.fraikin.com/git/panier.git",
+                "code_qualite":{
+                    "url": "https//serveur:9000/projet/panier",
+                    "dette-technique": 345    
+                },
+                "test_u": false,
+                "ci": true,
+                "cd": false
+            },
+            "archi_fonctionnelle":{
+                "domaine": "comptabilite",
+                "processus":{
+                    "name": "commande de pièces",
+                    "operations":[],
+                    "acteurs":[]
+                },
+                "fonctionalites":[]
+            },
+            "archi_technique":{
+                "technologies":[]
+            },
+            "infrastructure":{
+                "hebergeur": "AWS",
+                "serveur":{
+                    "technologie":"",
+                    "datacenter":"",
+                    "site":""
+                },
+                "bdd":{
+                    "technologie":""
+                }
+            },
+            "integration":{
+                "flux":[
+                    {"application":"",
+                    "contenu":{
+                        "donnees":[]
+                    },
+                    "in_out":"in",
+                    "protocol":"HTTPS",
+                    "type": "restful",
+                    "url": "https//www.fraikin.com/ws/v1/getPanier"
+                    }
+                ]
+            },
+            "data":{
+                
+            }        
+        },
+        {
+            "name": "vecos"
+        }
+    ]
+}
