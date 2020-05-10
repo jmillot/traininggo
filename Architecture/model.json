@@ -1,0 +1,96 @@
+{
+    "apps":[
+        {
+            "id": 1,
+            "name": "panier",
+            "description": "Application de gestion de commandes de pièces de rechange",
+            "business_unit":"marketing",
+            "strategie":"client",
+            "product_owner": "Toto",
+            "resp_domaine_IT":"Titi",
+            "current_version": "1.0",
+            "status": "PROD",
+            "last_version":{
+                "date": "2020-06-01",
+                "ver_num": "2.0"
+            },
+            "portefeuille":"Finance",
+            "projet":{
+                "ppm":"P097",
+                "name": "service 2.0",
+                "date_fin":"2020-12-31",
+                "budget_prev":"",
+                "budget_reel":"",
+                "statut":"en cours",
+                "chef_projet":""
+            },
+            "editeur":{
+                "name": "NRX",
+                "contact_tel":"",
+                "contact_mail": "machin@cie.com"
+            },
+            "qualite":{
+                "repository": "code_commit",
+                "url":"https//www.fraikin.com/git/panier.git",
+                "code_qualite":{
+                    "url": "https//serveur:9000/projet/panier",
+                    "dette-technique": 345    
+                },
+                "test_u": false,
+                "ci": true,
+                "cd": false
+            },
+            "archi_fonctionnelle":{
+                "domaine": "comptabilite",
+                "processus":{
+                    "name": "commande de pièces",
+                    "operations":[],
+                    "acteurs":[]
+                },
+                "fonctionalites":[]
+            },
+            "archi_technique":{
+                "environnement":"windows",
+                "technologies":[],
+                "languages":[]
+            },
+            "infrastructure":{
+                "hebergeur": "AWS",
+                "serveur":{
+                    "technologie":"Linux Redhat",
+                    "version": "7.4",
+                    "datacenter":"west-eu",
+                    "site":"unknow"
+                },
+                "bdd":{
+                    "technologie":"MySQL",
+                    "version": "5.6"
+                }
+            },
+            "integration":{
+                "flux":[
+                    {"application":"",
+                    "contenu":{
+                        "donnees":[
+                            "nom",
+                            "prenom"
+                        ]
+                    },
+                    "in_out":"in",
+                    "protocol":"HTTPS",
+                    "type": "restful",
+                    "url": "https//www.fraikin.com/ws/v1/getPanier"
+                    }
+                ]
+            },
+            "data_ref":{
+                "a definir": "est-ce un référentiel ?"
+            },
+            "licences": 50,
+            "type_licences": "souscription"        
+        },
+        {
+            "name": "vecos"
+        }
+    ]
+}

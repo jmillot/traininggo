@@ -27,7 +27,10 @@ func (e Entry) String() string {
 // New return a new Dictionary
 func New(dir string) (*Dictionary, error) {
 
-	db, err := badger.Open(badger.DefaultOptions(dir))
+	opt := badger.DefaultOptions(dir).WithSyncWrites(true)
+	opt.Truncate = true
+
+	db, err := badger.Open(opt)
 	if err != nil {
 		return nil, err
 	}
