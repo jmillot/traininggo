@@ -1,28 +1,19 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
 	"log"
-	"os"
+	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	file, err := os.Open("model.json")
-	if err != nil {
-		log.Fatal(err)
-	}
-	data := make([]byte, 4096)
-	_, err = file.Read(data)
-	if err != nil {
-		log.Fatal(err)
-	}
+	r := mux.NewRouter()
+	r.HandleFunc("/api/application", getApplications).Methods("GET")
 
-	// fmt.Println(data)
-	var objMap map[string]interface{}
-	err = json.Unmarshal(data, &objMap)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(objMap)
+	log.Fatal(http.ListenAndServe(":8080", r))
+}
+
+func getApplications(w http.ResponseWriter, r *http.Request) {
+
 }

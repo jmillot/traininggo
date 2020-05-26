@@ -1,6 +1,9 @@
 package application
 
-import "database/sql"
+import (
+	"database/sql"
+	"text/template"
+)
 
 type application struct {
 	ID             int
@@ -16,6 +19,15 @@ type application struct {
 	Fonctionnalite []int // Met à disposition
 }
 
-func dbConnaect(db *sql.DB) {
+func dbConnect() (db *sql.DB) {
+	dbDriver := "mysql"
+	dbUser := "architect_mtp"
+	dbPass := "architect"
+	dbName := "architecture_mtp"
 
+	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@/"+dbName)
+	if err != nil {
+		panic(err.Error())
+	}
+	return db
 }
