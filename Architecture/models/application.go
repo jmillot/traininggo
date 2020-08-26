@@ -2,7 +2,6 @@ package application
 
 import (
 	"database/sql"
-	"text/template"
 )
 
 type application struct {
