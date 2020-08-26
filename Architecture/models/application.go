@@ -4,7 +4,8 @@ import (
 	"database/sql"
 )
 
-type application struct {
+// Application is the main object
+type Application struct {
 	ID             int
 	Name           string
 	Business       string
