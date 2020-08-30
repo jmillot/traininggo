@@ -39,7 +39,7 @@ func (s *server) handleMovieDetail() http.HandlerFunc {
 		id, err := strconv.ParseInt(vars["id"], 10, 64)
 		if err != nil {
 			log.Printf("Invalid parameter, err=%v", err)
-			s.respond(w, r, nil, http.StatusInternalServerError)
+			s.respond(w, r, nil, http.StatusBadRequest)
 			return
 		}
 		movie, err := s.store.GetMovieByID(id)
@@ -51,6 +51,43 @@ func (s *server) handleMovieDetail() http.HandlerFunc {
 		var reponse jsonMovie
 		reponse = mapMovieToJSON(movie)
 		s.respond(w, r, reponse, http.StatusOK)
+		return
+	}
+}
+
+func (s *server) handleCreateMovie() http.HandlerFunc {
+	type request struct {
+		Title       string `json:"title"`
+		ReleaseDate string `json:"release_date"`
+		Duration    int    `json:"duration"`
+		TrailerURL  string `json:"trailer_url"`
+	}
+	return func(w http.ResponseWriter, r *http.Request) {
+		req := request{}
+		err := s.decode(w, r, &req)
+
+		if err != nil {
+			log.Printf("Error when trying to decode json data. Err=%v", err)
+			s.respond(w, r, nil, http.StatusBadRequest)
+			return
+		}
+		movie := &Movie{
+			ID:          0,
+			Title:       req.Title,
+			ReleaseDate: req.ReleaseDate,
+			Duration:    req.Duration,
+			TrailerURL:  req.TrailerURL,
+		}
+
+		err = s.store.CreateMovie(movie)
+		if err != nil {
+			log.Printf("Cannot insert Movie in database. Err=%v", err)
+			s.respond(w, r, nil, http.StatusInternalServerError)
+			return
+		}
+
+		reponse := mapMovieToJSON(movie)
+		s.respond(w, r, reponse, http.StatusCreated)
 		return
 	}
 }
